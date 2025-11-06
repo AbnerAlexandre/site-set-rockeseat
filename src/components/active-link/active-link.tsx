@@ -15,7 +15,7 @@ export function ActiveLink({ children, href, ...props }: ActiveLinkProps) {
     return (
         <Link
             href={href}
-            className={cn("text-sm font-medium transition-color hover:text-blue-500", isCurrentPath ? 'text-blue-500' : 'text-foreground')}
+            className={cn("text-action-sm font-medium transition-color hover:text-blue-200", isCurrentPath ? 'text-blue-200' : 'text-gray-100')}
         >
             {children}
         </Link>
