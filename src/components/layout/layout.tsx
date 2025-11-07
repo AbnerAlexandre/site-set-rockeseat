@@ -6,13 +6,22 @@ type LayoutProps = {
     children: React.ReactNode;
 }
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+    subsets: ["latin"],
+    weight: ["400", "500"],
+    variable: "--font-inter"
+});
+const ptSansCaption = Inter({ 
+    subsets: ["latin"], 
+    weight: "700", 
+    variable: "--font-sans" 
+});
 
 export function Layout({ children }: LayoutProps) {
     return (
-        <div className={`relative flex min-h-screen flex-col bg-gray-700 ${inter.className}`}>
+        <div className={`relative flex min-h-screen flex-col bg-gray-700 ${inter.className} ${ptSansCaption.className}`}>
             <Header />
-            <main className="flex-1 flex flex-col">
+            <main className="flex-1 flex flex-col mt-10 mb-12 font-inter">
                 {children}
             </main>
             <Footer />
