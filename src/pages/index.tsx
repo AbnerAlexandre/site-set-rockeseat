@@ -1,5 +1,6 @@
 import { FeatureSection } from "@/components/feature-section";
 import { HeroSection } from "@/components/hero-section";
+import { SupportSection } from "@/components/suport-section";
 
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <article className="flex-col">
         <HeroSection />
         <FeatureSection />
+        <SupportSection />
       </article>
     </>
   );
